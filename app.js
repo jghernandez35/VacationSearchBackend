@@ -3,13 +3,11 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongodb = require('mongodb').MongoClient;
-//var cors = require('cors');
 
 var users = require('./routes/users');
 var paquetes = require('./routes/paquetes');
 
 var app = express();
-//app.use(cors());
 
 let dbMongo;
 mongodb.connect("mongodb://localhost:27017/library", (err, db)=>{
